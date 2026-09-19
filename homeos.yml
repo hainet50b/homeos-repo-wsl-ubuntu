@@ -1,1 +1,4 @@
-packages: {}
+packages:
+  homeos:
+    script_aliases:
+      update: install
