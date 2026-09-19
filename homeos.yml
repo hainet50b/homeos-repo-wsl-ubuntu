@@ -2,14 +2,6 @@ packages:
   apex-skills:
     depends_on:
     - node
-  aws-auth:
-    depends_on:
-    - gh
-    plugin: gh-skill
-    params:
-      agents: universal,claude-code
-      repo: aws/agent-toolkit-for-aws
-      skill: core-skills/aws-auth
   aws-billing-and-cost-management:
     depends_on:
     - gh
@@ -18,6 +10,14 @@ packages:
       agents: universal,claude-code
       repo: aws/agent-toolkit-for-aws
       skill: core-skills/aws-billing-and-cost-management
+  aws-iam:
+    depends_on:
+    - gh
+    plugin: gh-skill
+    params:
+      agents: universal,claude-code
+      repo: aws/agent-toolkit-for-aws
+      skill: core-skills/aws-iam
   awscli:
     depends_on:
     - mise

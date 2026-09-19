@@ -57,8 +57,8 @@ homeos apply
 | Skill | Plugin | Dependencies | Purpose |
 |---|---|---|---|
 | [apex-skills](packages/apex-skills/) | — | [node](packages/node/) | Apex agent skills and `/apex` commands for Claude Code, from the `apex-skills` npm installer. |
-| [aws-auth](packages/aws-auth/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | AWS authentication and authorization fundamentals, from the Agent Toolkit for AWS. |
 | [aws-billing-and-cost-management](packages/aws-billing-and-cost-management/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | AWS Budgets, Cost Explorer, pricing and Free Tier guidance, from the Agent Toolkit for AWS. |
+| [aws-iam](packages/aws-iam/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | IAM roles, policies, STS and Identity Center pitfalls and workflows, from the Agent Toolkit for AWS. |
 | [hainet50b-skills](packages/hainet50b-skills/) | — | [gh](packages/gh/) | Every agent skill published in [hainet50b/skills](https://github.com/hainet50b/skills), synced for the universal and Claude Code agents. |
 | [homeos-inventory](packages/homeos-inventory/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | Tells AI agents which tools and applications homeos has installed. |
 | [homeos-manage](packages/homeos-manage/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | Teaches AI agents to install, update, and uninstall software through homeos. |
