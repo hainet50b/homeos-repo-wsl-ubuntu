@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -eu
+for agent in $(printf '%s' '{{agents}}' | tr ',' ' '); do
+    gh skill install {{repo}} {{skill}} --agent "$agent" --scope user --force
+done

@@ -1,4 +1,209 @@
 packages:
+  apex-skills:
+    depends_on:
+    - node
+  awscli:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: awscli@2
+  bat:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: bat
+  chezmoi:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: chezmoi
+  claude-code: {}
+  codex-cli:
+    script_aliases:
+      update: install
+  delta:
+    plugin: apt
+    params:
+      name: git-delta
+  eza:
+    plugin: apt
+    params:
+      name: eza
+  fd:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: fd
+  fzf:
+    plugin: apt
+    params:
+      name: fzf
+  gh:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: gh@latest
+  git-filter-repo:
+    plugin: apt
+    params:
+      name: git-filter-repo
+  gradle:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: gradle@9
+  hainet50b-skills:
+    script_aliases:
+      update: install
+    depends_on:
+    - gh
+  helm:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: helm@4
   homeos:
     script_aliases:
       update: install
+  homeos-inventory:
+    depends_on:
+    - gh
+    plugin: gh-skill
+    params:
+      agents: universal,claude-code
+      repo: hainet50b/homeos
+      skill: homeos-inventory
+  homeos-manage:
+    depends_on:
+    - gh
+    plugin: gh-skill
+    params:
+      agents: universal,claude-code
+      repo: hainet50b/homeos
+      skill: homeos-manage
+  jdk-temurin-25:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: java@temurin-25
+  jq:
+    plugin: apt
+    params:
+      name: jq
+  k9s:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: k9s@latest
+  kubectl:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: kubectl@1.37
+  lazydocker:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: lazydocker
+  lazygit:
+    plugin: apt
+    params:
+      name: lazygit
+  make:
+    plugin: apt
+    params:
+      name: make
+  maven:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: maven@3
+  mise: {}
+  neovim:
+    plugin: apt
+    params:
+      name: neovim
+  node:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: node@22
+  plain-language:
+    depends_on:
+    - gh
+    plugin: gh-skill
+    params:
+      agents: universal,claude-code
+      repo: hainet50b/plain-language
+      skill: plain-language
+  ripgrep:
+    plugin: apt
+    params:
+      name: ripgrep
+  rustup: {}
+  shellcheck:
+    plugin: apt
+    params:
+      name: shellcheck
+  shfmt:
+    plugin: apt
+    params:
+      name: shfmt
+  starship:
+    plugin: apt
+    params:
+      name: starship
+  terraform:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: terraform@1.16
+  unzip:
+    plugin: apt
+    params:
+      name: unzip
+  utsusemi-harness:
+    depends_on:
+    - gh
+    plugin: gh-skill
+    params:
+      agents: universal,claude-code
+      repo: utsusemi-harness/utsusemi-harness
+      skill: utsusemi-harness
+  uv:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: uv
+  yazi:
+    depends_on:
+    - mise
+    plugin: mise
+    params:
+      tool: yazi
+  zoxide:
+    plugin: apt
+    params:
+      name: zoxide
+plugins:
+  apt:
+    url: https://github.com/homeos-dev/homeos-plugin-apt
+  gh-skill:
+    url: https://github.com/homeos-dev/homeos-plugin-gh-skill
+  mise:
+    url: https://github.com/homeos-dev/homeos-plugin-mise

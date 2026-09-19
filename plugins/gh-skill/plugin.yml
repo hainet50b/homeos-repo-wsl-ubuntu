@@ -1,0 +1,5 @@
+description: Agent skill plugin for homeos, backed by GitHub CLI (gh skill, preview).
+params:
+  - repo
+  - skill
+  - agents

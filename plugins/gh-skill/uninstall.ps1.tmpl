@@ -1,0 +1,4 @@
+foreach ($agent in '{{agents}}' -split ',') {
+    gh skill list --agent $agent.Trim() --scope user --json skillName,path --jq '.[] | select(.skillName == "{{skill}}") | .path' |
+        Where-Object { $_ } | ForEach-Object { Remove-Item -Recurse -Force -LiteralPath $_ }
+}

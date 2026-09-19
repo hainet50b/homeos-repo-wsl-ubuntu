@@ -1,0 +1,4 @@
+foreach ($agent in '{{agents}}' -split ',') {
+    gh skill install {{repo}} {{skill}} --agent $agent.Trim() --scope user --force
+    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+}
