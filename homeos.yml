@@ -2,6 +2,20 @@ packages:
   apex-skills:
     depends_on:
     - node
+  aws-billing-and-cost-management:
+    depends_on:
+    - awscli
+    plugin: aws-agent-toolkit
+    params:
+      agents: universal,claude-code
+      skill: aws-billing-and-cost-management
+  aws-iam:
+    depends_on:
+    - awscli
+    plugin: aws-agent-toolkit
+    params:
+      agents: universal,claude-code
+      skill: aws-iam
   awscli:
     depends_on:
     - mise
@@ -162,6 +176,13 @@ packages:
     plugin: apt
     params:
       name: shfmt
+  signing-in-to-aws:
+    depends_on:
+    - awscli
+    plugin: aws-agent-toolkit
+    params:
+      agents: universal,claude-code
+      skill: signing-in-to-aws
   starship:
     plugin: apt
     params:
@@ -203,6 +224,8 @@ packages:
 plugins:
   apt:
     url: https://github.com/homeos-dev/homeos-plugin-apt
+  aws-agent-toolkit:
+    url: https://github.com/homeos-dev/homeos-plugin-aws-agent-toolkit
   gh-skill:
     url: https://github.com/homeos-dev/homeos-plugin-gh-skill
   mise:

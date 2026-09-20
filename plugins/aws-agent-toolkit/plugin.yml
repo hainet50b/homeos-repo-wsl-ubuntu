@@ -1,0 +1,4 @@
+description: Agent skill plugin for homeos, backed by the AWS CLI (aws agent-toolkit).
+params:
+  - skill
+  - agents

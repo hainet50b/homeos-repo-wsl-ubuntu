@@ -57,10 +57,13 @@ homeos apply
 | Skill | Plugin | Dependencies | Purpose |
 |---|---|---|---|
 | [apex-skills](packages/apex-skills/) | — | [node](packages/node/) | Apex agent skills and `/apex` commands for Claude Code, from the `apex-skills` npm installer. |
+| [aws-billing-and-cost-management](packages/aws-billing-and-cost-management/) | [aws-agent-toolkit](plugins/aws-agent-toolkit/) | [awscli](packages/awscli/) | AWS Budgets, Cost Explorer, pricing and Free Tier guidance, from the Agent Toolkit for AWS. |
+| [aws-iam](packages/aws-iam/) | [aws-agent-toolkit](plugins/aws-agent-toolkit/) | [awscli](packages/awscli/) | IAM roles, policies, STS and Identity Center pitfalls and workflows, from the Agent Toolkit for AWS. |
 | [hainet50b-skills](packages/hainet50b-skills/) | — | [gh](packages/gh/) | Every agent skill published in [hainet50b/skills](https://github.com/hainet50b/skills), synced for the universal and Claude Code agents. |
 | [homeos-inventory](packages/homeos-inventory/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | Tells AI agents which tools and applications homeos has installed. |
 | [homeos-manage](packages/homeos-manage/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | Teaches AI agents to install, update, and uninstall software through homeos. |
 | [plain-language](packages/plain-language/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | Applies plain-language principles to the prose an agent writes, edits, reviews, or translates. |
+| [signing-in-to-aws](packages/signing-in-to-aws/) | [aws-agent-toolkit](plugins/aws-agent-toolkit/) | [awscli](packages/awscli/) | Signing in to AWS with IAM Identity Center, profiles and credentials, from the Agent Toolkit for AWS. |
 | [utsusemi-harness](packages/utsusemi-harness/) | [gh-skill](plugins/gh-skill/) | [gh](packages/gh/) | Utsusemi spec-driven development harness skill. |
 
 ## Plugins
@@ -68,6 +71,7 @@ homeos apply
 | Plugin | Source | Description |
 |---|---|---|
 | [apt](plugins/apt/) | [homeos-dev/homeos-plugin-apt](https://github.com/homeos-dev/homeos-plugin-apt) | APT package manager plugin for homeos. |
+| [aws-agent-toolkit](plugins/aws-agent-toolkit/) | [homeos-dev/homeos-plugin-aws-agent-toolkit](https://github.com/homeos-dev/homeos-plugin-aws-agent-toolkit) | Agent skill plugin for homeos, backed by the AWS CLI (aws agent-toolkit). |
 | [gh-skill](plugins/gh-skill/) | [homeos-dev/homeos-plugin-gh-skill](https://github.com/homeos-dev/homeos-plugin-gh-skill) | Agent skill plugin for homeos, backed by GitHub CLI (gh skill, preview). |
 | [mise](plugins/mise/) | [homeos-dev/homeos-plugin-mise](https://github.com/homeos-dev/homeos-plugin-mise) | mise tool version manager plugin for homeos. |
 

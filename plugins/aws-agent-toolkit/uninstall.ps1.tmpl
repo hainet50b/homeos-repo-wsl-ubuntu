@@ -1,0 +1,4 @@
+foreach ($agent in '{{agents}}' -split ',') {
+    aws agent-toolkit remove-skill --skill-name {{skill}} --agent $agent.Trim() --region us-east-1 --no-sign-request
+    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+}
