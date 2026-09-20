@@ -2,22 +2,6 @@ packages:
   apex-skills:
     depends_on:
     - node
-  aws-billing-and-cost-management:
-    depends_on:
-    - gh
-    plugin: gh-skill
-    params:
-      agents: universal,claude-code
-      repo: aws/agent-toolkit-for-aws
-      skill: core-skills/aws-billing-and-cost-management
-  aws-iam:
-    depends_on:
-    - gh
-    plugin: gh-skill
-    params:
-      agents: universal,claude-code
-      repo: aws/agent-toolkit-for-aws
-      skill: core-skills/aws-iam
   awscli:
     depends_on:
     - mise
@@ -178,14 +162,6 @@ packages:
     plugin: apt
     params:
       name: shfmt
-  signing-in-to-aws:
-    depends_on:
-    - gh
-    plugin: gh-skill
-    params:
-      agents: universal,claude-code
-      repo: aws/agent-toolkit-for-aws
-      skill: core-skills/signing-in-to-aws
   starship:
     plugin: apt
     params:
