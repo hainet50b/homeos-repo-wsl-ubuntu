@@ -9,13 +9,6 @@ packages:
     params:
       agents: universal,claude-code
       skill: aws-billing-and-cost-management
-  aws-iam:
-    depends_on:
-    - awscli
-    plugin: aws-agent-toolkit
-    params:
-      agents: universal,claude-code
-      skill: aws-iam
   awscli:
     depends_on:
     - mise
